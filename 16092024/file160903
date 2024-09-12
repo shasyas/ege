@@ -1,0 +1,8 @@
+def bb(x):
+    if x < 11:
+        return x
+    else:
+        return (x+bb(x-1))
+
+    
+print(bb(2024) - bb(2021))
