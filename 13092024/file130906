@@ -1,0 +1,6 @@
+
+
+for i in range(1000):
+    for j in range(10):
+        if (10**(len(str(i))+6) + i*1000000 + 402209 + 10*j)%1987 == 0:
+            print(10**(len(str(i))+6) + i*1000000 + 402209 + 10*j)
