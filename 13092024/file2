@@ -1,0 +1,14 @@
+
+def hm(n):
+    a = str(bin(n))[2::]
+    b = sum(list(map(int,a)))%2
+    a = a+str(b)+'0'
+    return int(a,2)
+ 
+n = 0
+
+while hm(n) < 100:
+    n = n+1
+
+print(hm(n-1))
+    
