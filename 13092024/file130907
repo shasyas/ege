@@ -1,0 +1,1 @@
+print(bin(98) + bin(162) + bin(192) + bin(0))
