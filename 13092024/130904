@@ -1,0 +1,14 @@
+n = 35
+
+def bb(x):
+    if x == 1:
+        return 1
+    elif x == 2:
+        return 2
+    elif x%2 == 0:
+        return (3*x+bb(x-3))//3
+    else:
+        return (x*7+bb(x-1)-bb(x-2))//5
+
+    
+print(bb(n))
