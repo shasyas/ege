@@ -1,0 +1,13 @@
+f = open('24 (1).txt')
+m = str(f.readlines())
+c = m.replace('XZZY', ' ')
+
+
+d = c.split()
+
+#print(d)
+
+for i in range(len(d)):
+    d[i] = len(d[i])
+
+print(max(d))
