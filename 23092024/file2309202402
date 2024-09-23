@@ -1,0 +1,10 @@
+def fye(x):
+    a = 0
+    if x > 2:
+        for i in range(1,x):
+            a = a + fye(i)
+        return a
+    else:
+        return 1
+
+print(fye(18))
