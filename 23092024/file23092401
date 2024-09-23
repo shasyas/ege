@@ -1,0 +1,13 @@
+#1?2157*4
+
+a = []
+
+for i in range(1000):
+    for j in range(10):
+        if int('1' + str(j) + '2157' + str(i) + '4')%2024 == 0:
+            a.append((int('1' + str(j) + '2157' + str(i) + '4')))
+
+a.sort()
+
+for i in a:
+    print(i, i//2024)
