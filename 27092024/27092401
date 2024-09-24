@@ -1,0 +1,11 @@
+a = '120.91.174.205'
+b = a.split('.') 
+c = ''
+
+for i in range(4):
+    d = (8 - len(str(bin(int(b[i])))[2:]))*'0'
+    c = c + d + str(bin(int(b[i])))[2:] + ' '
+
+    
+
+print(c)
