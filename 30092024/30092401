@@ -1,0 +1,15 @@
+
+def hah(n):
+    a = str(bin(n))[2::]
+    if a[-1] == '0':
+        return int((a + '10'),2)
+    else:
+        return int((a + '01'),2)
+    
+    
+c = 1
+
+while hah(c) < 102:
+    c = c+1
+
+print(hah(c))
