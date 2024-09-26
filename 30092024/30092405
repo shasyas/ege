@@ -1,0 +1,14 @@
+a = input().split()
+
+b = []
+s = 0
+
+
+for i in range(10000):
+    for j in range(i+1, 10000):
+        if (int(a[i])*int(a[j]))%10 == 0:
+            b.append(int(a[i])+int(a[j]))
+            s = s+1
+
+        
+print(s, max(b))
