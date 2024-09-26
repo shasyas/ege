@@ -1,0 +1,11 @@
+for i in range(2422000, 2422081):
+    a = []
+    b = 0
+
+    for j in range(2, i//2 + 1):
+        if i%j == 0:
+            b = b + 1
+            a.append(j)
+            
+    if b == 0:
+        print(i)
