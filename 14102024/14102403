@@ -1,0 +1,8 @@
+a = open('24 (1).txt').readline().split('A')
+m = 0
+
+
+for i in range(len(a)):
+    if (len(a[i])>7) and ('A' not in a[i]) and ('B' not in a[i]):
+        m = m+1
+print(m)
