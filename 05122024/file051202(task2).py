@@ -1,17 +1,20 @@
-# ((x ≡ y) → (¬z ∨ w)) ≡ ¬ ((w → x) ∨ (y → z)).
-# ((x==y) <= ((not(z)) or w)) != ((w <= x) or (y <= z))
+#2
+from itertools import *
 
-a = [0, 1]
 
-print('x', 'y', 'z', 'w')
 
-for x in a:
 
-    for y in a:
+def fye3():
 
-        for z in a:
+    def f(x, y, z,w):
+        return ((x==y) <= ((not(z)) or w)) != ((w <= x) or (y <= z))
 
-            for w in a:
+    for a1, a2, a3, a4, a5 in product([0, 1], repeat=5):
+        tab = [(0,1,a1,a2), (a3,a4,1,0), (0,a5,0,0)]
 
-                if ((x == y) <= ((not (z)) or w)) != ((w <= x) or (y <= z)):
-                    print(x, y, z, w)
+        if len(tab) == len(set(tab)):
+            for p in permutations('xyzw'):
+                if [f(**dict(zip(p, r))) for r in tab] == [1, 1, 1]:
+                    print(p)
+
+fye3()
