@@ -6,7 +6,7 @@ b = []
 for i in range(a):
     b.append(int(f.readline()))
 
-mn = 10 ** 10
+mn = 10000000000
 
 for i in range(len(b)):
 
