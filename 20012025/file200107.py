@@ -20,7 +20,7 @@ for j in range(len(b)):
         break
 
 for i in b:
-    if a > i:
+    if a >= i:
         m = max(m,i)
 
 
