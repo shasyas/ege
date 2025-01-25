@@ -6,11 +6,13 @@ def zxc(p, t):
     x, y = p
     if t == 0:
         return y < 0
-    if x > 0:
-        return y > 0
-    elif y > -25:
-        return 2
-    return 3
+    if y > 1.2*x + 12:
+        return 5
+    if y > 0.8*x + 4:
+        return y > 7
+    if y > 3.9:
+        return 4
+    return ((y>x-2)+2)
 
 
 def fye(a, b):
