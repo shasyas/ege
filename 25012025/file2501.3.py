@@ -18,7 +18,11 @@ def zxc(p, t):
 def fye(a, b):
     x1, y1 = a
     x2, y2 = b
-    return ((x1 - x2)**2 + (y1 - y2)**2)**0.5
+
+    if ((x1 - x2)**2 + (y1 - y2)**2)**0.5 > 1:
+        return (0,((x1 - x2)**2 + (y1 - y2)**2)**0.5)
+
+    return (1,((x1 - x2)**2 + (y1 - y2)**2)**0.5)
 
 
 for t in range(2):
@@ -34,11 +38,12 @@ for t in range(2):
     ms = []
 
     for i in range(n):
-        dm = 10**1000
+        dm = 1
 
         for p in cs[i]:
-            d = sum(fye(p, j) for j in cs[i])
-            if d < dm:
+            d = sum(fye(p, j)[1] for j in cs[i])
+            g = sum(fye(p, j)[0] for j in cs[i])
+            if d > dm and g > 0:
                 k = p
                 dm = d
 
