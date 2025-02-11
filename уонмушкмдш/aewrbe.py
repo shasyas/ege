@@ -1,4 +1,4 @@
-from beautifulsoup4 import BeautifulSoup
+import beautifulsoup4
 
 soup = BeautifulSoup('<html><head><title>Заголовок страницы</title></head><body></body></html>', 'html.parser')
 
