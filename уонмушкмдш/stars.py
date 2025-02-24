@@ -12,6 +12,8 @@ def ch(x):
         return choice(h)
 
 def sim(c):
+    if 1072 > ord(c) > 1039:
+        c = chr(ord(c) + 32)
     if (ord(c) > 1103) or (ord(c) < 1072):
         return c
     b = a[ord(c)-1072]
