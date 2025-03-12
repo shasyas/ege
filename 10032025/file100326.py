@@ -21,14 +21,14 @@ for s, t, w in a:
     while len(w2) > 0 and w2[0] <= s:
         del w2[0]
     if w == 1 or (w != 1 and w != 2 and len(w1) <= len(w2)):
-        if w1 == []:
+        if len(w1) == 0:
             w1.append(s + t)
         elif len(w1) < 14:
             w1.append(w1[-1] + t)
         else:
             d += 1
     else:
-        if w2 == []:
+        if len(w2) == 0:
             c += 1
             w2.append(s + t)
         elif len(w2) < 14:
